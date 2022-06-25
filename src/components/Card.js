@@ -11,6 +11,7 @@ function Card(props) {
     cardRare,
     cardTrunfo
   } = props;
+
   return (
     <article className="card">
       <h1 className="card__title" data-testid="name-card">
