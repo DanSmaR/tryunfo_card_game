@@ -2,7 +2,7 @@ import React from 'react';
 import InputName from './InputName';
 import InputTextArea from './InputTextArea';
 import InputNumberAttr from './InputNumberAttr';
-
+import InputImageURL from './InputImageURL';
 class Form extends React.Component {
   render() {
     return (
@@ -44,7 +44,7 @@ class Form extends React.Component {
         </section>
 
         <section>
-
+          <InputImageURL />
         </section>
       </form>
     );
