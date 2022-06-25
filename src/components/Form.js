@@ -3,6 +3,7 @@ import InputName from './InputName';
 import InputTextArea from './InputTextArea';
 import InputNumberAttr from './InputNumberAttr';
 import InputImageURL from './InputImageURL';
+import InputSelectRare from './InputSelectRare';
 class Form extends React.Component {
   render() {
     return (
@@ -45,6 +46,10 @@ class Form extends React.Component {
 
         <section>
           <InputImageURL />
+        </section>
+
+        <section>
+          <InputSelectRare />
         </section>
       </form>
     );
