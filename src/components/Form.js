@@ -5,6 +5,8 @@ import InputNumberAttr from './InputNumberAttr';
 import InputImageURL from './InputImageURL';
 import InputSelectRare from './InputSelectRare';
 import InputCheckbox from './InputCheckbox';
+import SubmitButton from './SubmitButton';
+
 class Form extends React.Component {
   render() {
     return (
@@ -55,6 +57,10 @@ class Form extends React.Component {
 
         <section>
           <InputCheckbox />
+        </section>
+
+        <section>
+          <SubmitButton />
         </section>
       </form>
     );
