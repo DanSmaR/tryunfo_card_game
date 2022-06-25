@@ -14,7 +14,6 @@ class Form extends React.Component {
       cardAttr2,
       cardAttr3,
       hasTrunfo,
-      onInputChange,
     } = this.props;
 
     return (

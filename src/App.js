@@ -1,27 +1,34 @@
 import React from 'react';
+import Card from './components/Card';
 import Form from './components/Form';
 
 const defaultProps = {
-  cardName: "Nome da carta",
-  cardDescription: "Descrição da carta",
-  cardAttr1: "12",
-  cardAttr2: "34",
-  cardAttr3: "56",
-  cardImage: "url-to-image",
-  cardRare: "raro",
+  cardName: 'Nome da carta',
+  cardDescription: 'Descrição da carta',
+  cardAttr1: '12',
+  cardAttr2: '34',
+  cardAttr3: '56',
+  cardImage: 'url-to-image',
+  cardRare: 'raro',
   cardTrunfo: true,
   hasTrunfo: false,
   isSaveButtonDisabled: false,
-  onInputChange: () => { },
-  onSaveButtonClick: () => { },
+  onInputChange: () => {},
+  onSaveButtonClick: () => {},
 };
 class App extends React.Component {
   render() {
     return (
-      <div className="wrapper">
+      <article className="wrapper">
         <h1>Tryunfo</h1>
-        <Form { ...defaultProps } />
-      </div>
+        <section>
+          <Form { ...defaultProps } />
+        </section>
+
+        <section>
+          <Card { ...defaultProps } />
+        </section>
+      </article>
     );
   }
 }
