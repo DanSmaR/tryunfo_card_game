@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function InputName(props) {
+  const { cardName, onInputChange } = props;
   return (
     <p>
       <label htmlFor="name">
@@ -9,9 +10,9 @@ export default function InputName(props) {
           type="text"
           id="name"
           name="cardName"
-          value={ props }
+          value={ cardName }
           data-testid="name-input"
-          onChange={ props }
+          onChange={ onInputChange }
         />
       </label>
     </p>

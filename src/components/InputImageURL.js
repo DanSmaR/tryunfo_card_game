@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function InputImageURL(props) {
+  const { cardImage, onInputChange } = props;
   return (
     <p>
       <label htmlFor="cardImage">
@@ -8,9 +9,10 @@ export default function InputImageURL(props) {
         <input
           type="text"
           id="cardImage"
-          value={ props }
+          name="cardImage"
+          value={ cardImage }
           data-testid="image-input"
-          onChange={ props }
+          onChange={ onInputChange }
         />
       </label>
     </p>

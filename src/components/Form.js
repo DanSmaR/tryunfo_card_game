@@ -9,37 +9,48 @@ import SubmitButton from './SubmitButton';
 
 class Form extends React.Component {
   render() {
+    const {
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      hasTrunfo,
+      onInputChange,
+    } = this.props;
+
     return (
       <form action="">
         <h2>Adicionar nova carta</h2>
 
         <section>
-          <InputName />
-          <InputTextArea />
+          <InputName { ...this.props } />
+          <InputTextArea { ...this.props } />
         </section>
 
         <section>
           <ul>
             <InputNumberAttr
+              { ...this.props }
               id="attr01"
-              name="attr01Card"
-              value="01"
+              name="cardAttr1"
+              value={ cardAttr1 }
               testId="attr1-input"
             >
               Attr01
             </InputNumberAttr>
             <InputNumberAttr
+              { ...this.props }
               id="attr02"
-              name="attr02Card"
-              value="02"
+              name="cardAttr2"
+              value={ cardAttr2 }
               testId="attr2-input"
             >
               Attr02
             </InputNumberAttr>
             <InputNumberAttr
+              { ...this.props }
               id="attr03"
-              name="attr03Card"
-              value="03"
+              name="cardAttr3"
+              value={ cardAttr3 }
               testId="attr3-input"
             >
               Attr03
@@ -48,19 +59,19 @@ class Form extends React.Component {
         </section>
 
         <section>
-          <InputImageURL />
+          <InputImageURL { ...this.props } />
         </section>
 
         <section>
-          <InputSelectRare />
+          <InputSelectRare { ...this.props } />
         </section>
 
         <section>
-          <InputCheckbox />
+          <InputCheckbox { ...this.props } />
         </section>
 
         <section>
-          <SubmitButton />
+          <SubmitButton { ...this.props } />
         </section>
       </form>
     );

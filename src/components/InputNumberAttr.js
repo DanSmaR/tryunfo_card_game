@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function InputNumberAttr(props) {
-  const { children, id, name, value, testId } = props;
+  const { children, id, name, value, testId, onInputChange } = props;
 
   return (
     <li>
@@ -12,7 +12,7 @@ export default function InputNumberAttr(props) {
           name={ name }
           id={ id }
           value={ value }
-          onChange={ props }
+          onChange={ onInputChange }
           data-testid={ testId }
         />
       </label>
