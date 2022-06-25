@@ -8,9 +8,10 @@ export default function InputName(props) {
         <input
           type="text"
           id="name"
-          name="card-name"
+          name="cardName"
           value={ props }
           data-testid="name-input"
+          onChange={ props }
         />
       </label>
     </p>
