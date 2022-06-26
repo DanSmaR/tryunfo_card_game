@@ -11,11 +11,11 @@ export default function InputTextArea(props) {
           name="cardDescription"
           id="description"
           cols="30"
-          rows="10"
+          rows="5"
           value={ cardDescription }
           onChange={ onInputChange }
           data-testid="description-input"
-          placeholder={ !cardDescription ? 'Digite uma Descrição sobre a Carta' : '' }
+          placeholder={ !cardDescription ? 'Descrição sobre a Carta' : '' }
         />
       </label>
     </p>

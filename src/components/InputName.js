@@ -13,7 +13,7 @@ export default function InputName(props) {
           value={ cardName }
           data-testid="name-input"
           onChange={ onInputChange }
-          placeholder={ !cardName ? 'Digite um Nome' : '' }
+          placeholder={ !cardName ? 'Nome da Carta' : '' }
         />
       </label>
     </p>

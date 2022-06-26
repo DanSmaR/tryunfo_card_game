@@ -2,6 +2,7 @@ import React from 'react';
 import Card from './components/Card';
 import Form from './components/Form';
 import CardsLibrary from './components/CardsLibrary';
+import SearchBar from './components/SearchBar';
 
 class App extends React.Component {
   constructor() {
@@ -18,6 +19,8 @@ class App extends React.Component {
       hasTrunfo: false,
       isSaveButtonDisabled: true,
       cards: [],
+      nameFilter: '',
+      rareFilter: 'todas',
     };
   }
 
@@ -31,6 +34,15 @@ class App extends React.Component {
     }
     this.setState({
       cards: newCards,
+    });
+  }
+
+  handleInputFilterChanges = ({ target }) => {
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const { name } = target;
+
+    this.setState({
+      [name]: value,
     });
   }
 
@@ -151,6 +163,10 @@ class App extends React.Component {
         </section>
 
         <section className="card-library">
+          <SearchBar
+            { ...this.state }
+            onInputFilterChange={ this.handleInputFilterChanges }
+          />
           <CardsLibrary { ...this.state } onDeleteCards={ this.handleDeleteCards } />
         </section>
       </article>
