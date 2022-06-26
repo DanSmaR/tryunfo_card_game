@@ -2,20 +2,6 @@ import React from 'react';
 import Card from './components/Card';
 import Form from './components/Form';
 
-/* const defaultProps = {
-  cardName: 'Nome da carta',
-  cardDescription: 'Descrição da carta',
-  cardAttr1: '12',
-  cardAttr2: '34',
-  cardAttr3: '56',
-  cardImage: 'url-to-image',
-  cardRare: 'raro',
-  cardTrunfo: true,
-  hasTrunfo: false,
-  isSaveButtonDisabled: false,
-  onInputChange: () => {},
-  onSaveButtonClick: () => {},
-}; */
 class App extends React.Component {
   constructor() {
     super();
@@ -30,6 +16,7 @@ class App extends React.Component {
       cardTrunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: true,
+      cards: [],
     };
   }
 
@@ -39,10 +26,51 @@ class App extends React.Component {
 
     this.setState({
       [name]: value,
-    }, () => this.setDisableSaveButton());
+    }, () => this.handleDisableSaveButton());
   }
 
-  setDisableSaveButton = () => {
+  handleSavedCards = (event) => {
+    event.preventDefault();
+
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+      cards,
+    } = this.state;
+
+    const cardData = {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+    };
+
+    cards.push(cardData);
+
+    this.setState({
+      cardName: '',
+      cardDescription: '',
+      cardAttr1: '0',
+      cardAttr2: '0',
+      cardAttr3: '0',
+      cardImage: '',
+      cardRare: 'normal',
+      cardTrunfo: false,
+      cards,
+    });
+  }
+
+  handleDisableSaveButton = () => {
     const {
       cardName,
       cardDescription,
@@ -94,6 +122,7 @@ class App extends React.Component {
           <Form
             { ...this.state }
             onInputChange={ this.handleInputChanges }
+            onSaveButtonClick={ this.handleSavedCards }
           />
         </section>
 
