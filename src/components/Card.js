@@ -14,9 +14,9 @@ function Card(props) {
 
   return (
     <article className="card">
-      <h1 className="card__title" data-testid="name-card">
+      <h3 className="card__title" data-testid="name-card">
         { cardName }
-      </h1>
+      </h3>
       <img
         className="card__image"
         src={ cardImage }

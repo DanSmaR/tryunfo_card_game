@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './components/Card';
 import Form from './components/Form';
+import CardsLibrary from './components/CardsLibrary';
 
 class App extends React.Component {
   constructor() {
@@ -73,7 +74,7 @@ class App extends React.Component {
       cardRare: 'normal',
       cardTrunfo: false,
       cards,
-    });
+    }, () => this.setDisableSaveButton());
   }
 
   setDisableSaveButton() {
@@ -124,7 +125,7 @@ class App extends React.Component {
     return (
       <article className="wrapper">
         <h1>Tryunfo</h1>
-        <section>
+        <section className="card-input">
           <Form
             { ...this.state }
             onInputChange={ this.handleInputChanges }
@@ -132,8 +133,12 @@ class App extends React.Component {
           />
         </section>
 
-        <section>
+        <section className="card-preview">
           <Card { ...this.state } />
+        </section>
+
+        <section className="card-library">
+          <CardsLibrary { ...this.state } />
         </section>
       </article>
     );
