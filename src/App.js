@@ -21,6 +21,19 @@ class App extends React.Component {
     };
   }
 
+  handleDeleteCards = (name, trunfo) => {
+    const { cards } = this.state;
+    const newCards = cards.filter(({ cardName }) => cardName !== name);
+    if (trunfo) {
+      this.setState({
+        hasTrunfo: false,
+      });
+    }
+    this.setState({
+      cards: newCards,
+    });
+  }
+
   handleInputChanges = ({ target }) => {
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const { name } = target;
@@ -138,7 +151,7 @@ class App extends React.Component {
         </section>
 
         <section className="card-library">
-          <CardsLibrary { ...this.state } />
+          <CardsLibrary { ...this.state } onDeleteCards={ this.handleDeleteCards } />
         </section>
       </article>
     );
