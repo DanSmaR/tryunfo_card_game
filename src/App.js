@@ -26,7 +26,7 @@ class App extends React.Component {
 
     this.setState({
       [name]: value,
-    }, () => this.handleDisableSaveButton());
+    }, () => this.setDisableSaveButton());
   }
 
   handleSavedCards = (event) => {
@@ -57,6 +57,12 @@ class App extends React.Component {
 
     cards.push(cardData);
 
+    if (cardTrunfo) {
+      this.setState({
+        hasTrunfo: true,
+      });
+    }
+
     this.setState({
       cardName: '',
       cardDescription: '',
@@ -70,7 +76,7 @@ class App extends React.Component {
     });
   }
 
-  handleDisableSaveButton = () => {
+  setDisableSaveButton() {
     const {
       cardName,
       cardDescription,
