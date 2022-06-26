@@ -21,6 +21,7 @@ class App extends React.Component {
       cards: [],
       nameFilter: '',
       rareFilter: 'todas',
+      trunfoFilter: false,
     };
   }
 

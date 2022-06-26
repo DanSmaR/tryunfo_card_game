@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 
 export default function CardsLibrary(props) {
-  const { cards, onDeleteCards, nameFilter, rareFilter } = props;
+  const { cards, nameFilter, rareFilter, trunfoFilter, onDeleteCards } = props;
 
   return (
     <>
@@ -10,6 +10,12 @@ export default function CardsLibrary(props) {
       <div className="cards-wrapper">
         {
           cards
+            .filter((card) => {
+              if (trunfoFilter) {
+                return card.cardTrunfo === trunfoFilter;
+              }
+              return true;
+            })
             .filter((card) => {
               if (!nameFilter) return true;
               return card.cardName.includes(nameFilter);
