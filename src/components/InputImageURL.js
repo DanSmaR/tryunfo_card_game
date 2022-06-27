@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function InputImageURL(props) {
   const { cardImage, onInputChange } = props;
@@ -19,3 +20,8 @@ export default function InputImageURL(props) {
     </p>
   );
 }
+
+InputImageURL.propTypes = {
+  cardImage: PropTypes.string.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+};
