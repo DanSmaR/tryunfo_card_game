@@ -49,6 +49,7 @@ ul {
 
 .attr-info {
   font-weight: bold;
+  text-align: right;
 }
 
 .attr-info--valid {
@@ -57,4 +58,12 @@ ul {
 
 .attr-info--danger {
   color: red;
+}
+
+.form__card-level .form-control {
+  width: 80% !important;
+}
+
+.form__card-level .input-group-text {
+  width: 20%;
 }

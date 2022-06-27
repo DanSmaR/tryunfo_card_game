@@ -25,15 +25,15 @@ class Form extends React.Component {
     } = this.props;
 
     return (
-      <form onSubmit={ this.handleSubmit }>
+      <form className="form" onSubmit={ this.handleSubmit }>
         <h2>Adicionar nova carta</h2>
 
-        <section>
+        <section className="form__card-info">
           <InputName { ...this.props } />
           <InputTextArea { ...this.props } />
         </section>
 
-        <section>
+        <section className="form__card-level">
           <ul>
             <InputNumberAttr
               { ...this.props }
@@ -69,19 +69,19 @@ class Form extends React.Component {
           <PointSumInfo { ...this.props } />
         </section>
 
-        <section>
+        <section className="form__card-image">
           <InputImageURL { ...this.props } />
         </section>
 
-        <section>
+        <section className="form__card-rare">
           <InputSelectRare { ...this.props } />
         </section>
 
-        <section>
+        <section className="form__card-trunfo">
           <InputCheckbox { ...this.props } />
         </section>
 
-        <section>
+        <section className="form__card-save">
           <SubmitButton { ...this.props } />
         </section>
       </form>
