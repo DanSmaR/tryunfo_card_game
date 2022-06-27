@@ -5,8 +5,10 @@ export default function InputSelectRare(props) {
   const { cardRare, onInputChange } = props;
   return (
     <p>
-      <label htmlFor="cardRareSelection">
+      <label htmlFor="cardRareSelection" className="row-input">
+        <span>Raridade</span>
         <select
+          className="form-select"
           name="cardRare"
           id="cardRareSelection"
           value={ cardRare }

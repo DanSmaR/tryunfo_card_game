@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import dan from '../'
 
 export default function InputImageURL(props) {
   const { cardImage, onInputChange } = props;
   return (
     <p>
-      <label htmlFor="cardImage" className="row">
+      <label htmlFor="cardImage" className="row-input">
         <span className="col-sm-3 col-form-label">Imagem</span>
         <span className="col-sm-10 input-group">
           <span className="input-group-text">

@@ -14,9 +14,18 @@ code {
 
 /* Forms */
 
+.form {
+  width: 100%;
+  padding: 1em;
+}
+
 /* label {
   width: 100%;
 } */
+
+p {
+  width: 100%;
+}
 
 ul {
   list-style: none;
@@ -31,6 +40,11 @@ ul {
 
 .card-input {
   width: 30%;
+}
+
+.row-input {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Card Info */
