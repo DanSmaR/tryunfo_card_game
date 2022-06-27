@@ -65,6 +65,7 @@ class App extends React.Component {
 
   handleSavedCards = (event) => {
     event.preventDefault();
+    document.getElementById('name').focus();
 
     const {
       cardName,
