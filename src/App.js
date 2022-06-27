@@ -25,7 +25,7 @@ class App extends React.Component {
       maxAttrSumValue: 210,
       maxAttrValue: 90,
       isInputsNotEmpty: false,
-      isSumAttrsValid: false,
+      isSumAttrsValid: true,
       isAttr1Valid: false,
       isAttr2Valid: false,
       isAttr3Valid: false,
@@ -163,18 +163,19 @@ class App extends React.Component {
     return (
       <article className="wrapper">
         <h1>Tryunfo</h1>
-        <section className="card-input">
-          <Form
-            { ...this.state }
-            onInputChange={ this.handleInputChanges }
-            onSaveButtonClick={ this.handleSavedCards }
-          />
-        </section>
+        <div className="grid-layout">
+          <section className="card-input">
+            <Form
+              { ...this.state }
+              onInputChange={ this.handleInputChanges }
+              onSaveButtonClick={ this.handleSavedCards }
+            />
+          </section>
 
-        <section className="card-preview">
-          <Card { ...this.state } />
-        </section>
-
+          <section className="card-preview">
+            <Card { ...this.state } />
+          </section>
+        </div>
         <section className="card-library">
           <SearchBar
             { ...this.state }
