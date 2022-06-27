@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import InputName from './InputName';
 import InputTextArea from './InputTextArea';
 import InputNumberAttr from './InputNumberAttr';
@@ -71,3 +72,9 @@ function Form(props) {
 }
 
 export default Form;
+
+Form.propTypes = {
+  cardAttr1: PropTypes.string.isRequired,
+  cardAttr2: PropTypes.string.isRequired,
+  cardAttr3: PropTypes.string.isRequired,
+};
