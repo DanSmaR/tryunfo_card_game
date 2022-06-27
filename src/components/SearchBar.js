@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function SearchBar(props) {
   const { nameFilter, rareFilter, trunfoFilter, onInputFilterChange } = props;
@@ -50,3 +51,10 @@ function SearchBar(props) {
 }
 
 export default SearchBar;
+
+SearchBar.propTypes = {
+  nameFilter: PropTypes.string.isRequired,
+  rareFilter: PropTypes.string.isRequired,
+  trunfoFilter: PropTypes.bool.isRequired,
+  onInputFilterChange: PropTypes.func.isRequired,
+};
