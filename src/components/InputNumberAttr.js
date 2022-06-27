@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function InputNumberAttr(props) {
   const { children, id, name, value, testId, onInputChange } = props;
@@ -19,3 +20,12 @@ export default function InputNumberAttr(props) {
     </li>
   );
 }
+
+InputNumberAttr.propTypes = {
+  children: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  testId: PropTypes.string.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+};
