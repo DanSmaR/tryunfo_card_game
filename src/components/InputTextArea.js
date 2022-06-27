@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function InputTextArea(props) {
   const { cardDescription, onInputChange } = props;
@@ -21,3 +22,8 @@ export default function InputTextArea(props) {
     </p>
   );
 }
+
+InputTextArea.propTypes = {
+  cardDescription: PropTypes.string.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+};
