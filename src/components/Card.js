@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Card(props) {
   const {
@@ -9,7 +10,7 @@ function Card(props) {
     cardAttr3,
     cardImage,
     cardRare,
-    cardTrunfo
+    cardTrunfo,
   } = props;
 
   return (
@@ -49,3 +50,14 @@ function Card(props) {
 }
 
 export default Card;
+
+Card.propTypes = {
+  cardName: PropTypes.string.isRequired,
+  cardDescription: PropTypes.string.isRequired,
+  cardAttr1: PropTypes.string.isRequired,
+  cardAttr2: PropTypes.string.isRequired,
+  cardAttr3: PropTypes.string.isRequired,
+  cardImage: PropTypes.string.isRequired,
+  cardRare: PropTypes.bool.isRequired,
+  cardTrunfo: PropTypes.bool.isRequired,
+};
