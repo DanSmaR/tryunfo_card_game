@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function SubmitButton(props) {
   const { isSaveButtonDisabled, onSaveButtonClick } = props;
@@ -15,3 +16,8 @@ export default function SubmitButton(props) {
     </p>
   );
 }
+
+SubmitButton.propTypes = {
+  isSaveButtonDisabled: PropTypes.bool.isRequired,
+  onSaveButtonClick: PropTypes.func.isRequired,
+};
