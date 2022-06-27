@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function InputSelectRare(props) {
   const { cardRare, onInputChange } = props;
@@ -20,3 +21,8 @@ export default function InputSelectRare(props) {
     </p>
   );
 }
+
+InputSelectRare.propTypes = {
+  cardRare: PropTypes.string.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+};
