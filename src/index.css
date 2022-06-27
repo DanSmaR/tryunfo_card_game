@@ -12,6 +12,8 @@ code {
     monospace;
 }
 
+/* Forms */
+
 label {
   width: 100%;
 }
@@ -29,4 +31,30 @@ ul {
 
 .card-input {
   width: 30%;
+}
+
+/* Attributes Inputs */
+
+.input-group {
+  width: 75%;
+}
+
+.fa-check {
+  color: green;
+}
+
+.fa-times {
+  color: red;
+}
+
+.attr-info {
+  font-weight: bold;
+}
+
+.attr-info--valid {
+  color: green;
+}
+
+.attr-info--danger {
+  color: red;
 }

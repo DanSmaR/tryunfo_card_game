@@ -22,6 +22,13 @@ class App extends React.Component {
       nameFilter: '',
       rareFilter: 'todas',
       trunfoFilter: false,
+      maxAttrSumValue: 210,
+      maxAttrValue: 90,
+      isInputsNotEmpty: false,
+      isSumAttrsValid: false,
+      isAttr1Valid: false,
+      isAttr2Valid: false,
+      isAttr3Valid: false,
     };
   }
 
@@ -112,10 +119,9 @@ class App extends React.Component {
       cardAttr3,
       cardImage,
       cardRare,
+      maxAttrSumValue,
+      maxAttrValue,
     } = this.state;
-
-    const MAX_SUM = 210;
-    const MAX_ATTR_VALUE = 90;
 
     const cardAttr1Num = parseInt(cardAttr1, 10);
     const cardAttr2Num = parseInt(cardAttr2, 10);
@@ -125,11 +131,11 @@ class App extends React.Component {
       cardName && cardDescription && cardImage && cardRare,
     );
     const isSumAttrsValid = Boolean(
-      (cardAttr1Num + cardAttr2Num + cardAttr3Num) <= MAX_SUM,
+      (cardAttr1Num + cardAttr2Num + cardAttr3Num) <= maxAttrSumValue,
     );
-    const isAttr1Valid = Boolean((cardAttr1Num >= 0) && (cardAttr1Num <= MAX_ATTR_VALUE));
-    const isAttr2Valid = Boolean((cardAttr2Num >= 0) && (cardAttr2Num <= MAX_ATTR_VALUE));
-    const isAttr3Valid = Boolean((cardAttr3Num >= 0) && (cardAttr3Num <= MAX_ATTR_VALUE));
+    const isAttr1Valid = Boolean((cardAttr1Num >= 0) && (cardAttr1Num <= maxAttrValue));
+    const isAttr2Valid = Boolean((cardAttr2Num >= 0) && (cardAttr2Num <= maxAttrValue));
+    const isAttr3Valid = Boolean((cardAttr3Num >= 0) && (cardAttr3Num <= maxAttrValue));
 
     let isDisabled = true;
 
@@ -143,6 +149,11 @@ class App extends React.Component {
       isDisabled = false;
     }
     this.setState({
+      isInputsNotEmpty,
+      isSumAttrsValid,
+      isAttr1Valid,
+      isAttr2Valid,
+      isAttr3Valid,
       isSaveButtonDisabled: isDisabled,
     });
   }

@@ -14,7 +14,7 @@ function Card(props) {
   } = props;
 
   return (
-    <article className="card">
+    <article className="card_box">
       <h3 className="card__title" data-testid="name-card">
         { cardName }
       </h3>
