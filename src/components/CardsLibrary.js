@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Card from './Card';
 
 export default function CardsLibrary(props) {
@@ -41,3 +42,11 @@ export default function CardsLibrary(props) {
     </>
   );
 }
+
+CardsLibrary.propTypes = {
+  cards: PropTypes.arrayOf(PropTypes.object).isRequired,
+  nameFilter: PropTypes.string.isRequired,
+  rareFilter: PropTypes.string.isRequired,
+  trunfoFilter: PropTypes.bool.isRequired,
+  onDeleteCards: PropTypes.func.isRequired,
+};
