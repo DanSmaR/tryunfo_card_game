@@ -20,7 +20,7 @@ function Card(props) {
       </h3>
       <img
         className="card__image"
-        src={ cardImage }
+        src={ `../images/${cardImage}.png` }
         alt={ cardName }
         data-testid="image-card"
       />

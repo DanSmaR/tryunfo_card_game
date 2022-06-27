@@ -14,9 +14,9 @@ code {
 
 /* Forms */
 
-label {
+/* label {
   width: 100%;
-}
+} */
 
 ul {
   list-style: none;
@@ -31,6 +31,12 @@ ul {
 
 .card-input {
   width: 30%;
+}
+
+/* Card Info */
+
+.form__card-info label {
+  width: 100%;
 }
 
 /* Attributes Inputs */
@@ -60,10 +66,12 @@ ul {
   color: red;
 }
 
-.form__card-level .form-control {
+.form__card-level .form-control,
+.form__card-image .form-control {
   width: 80% !important;
 }
 
-.form__card-level .input-group-text {
+.form__card-level .input-group-text,
+.form__card-image .input-group-text {
   width: 20%;
 }
