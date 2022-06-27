@@ -8,6 +8,7 @@ export default function InputName(props) {
       <label htmlFor="name">
         Nome
         <input
+          className="form-control"
           type="text"
           id="name"
           name="cardName"

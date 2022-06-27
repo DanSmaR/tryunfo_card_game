@@ -5,10 +5,13 @@ export default function InputNumberAttr(props) {
   const { children, id, name, value, testId, onInputChange } = props;
 
   return (
-    <li>
-      <label htmlFor={ id }>
+    <li className="mb-3 row">
+      <label htmlFor={ id } className="col-sm-2 col-form-label">
         { children }
+      </label>
+      <div className="col-sm-10">
         <input
+          className="form-control"
           type="number"
           name={ name }
           id={ id }
@@ -16,7 +19,7 @@ export default function InputNumberAttr(props) {
           onChange={ onInputChange }
           data-testid={ testId }
         />
-      </label>
+      </div>
     </li>
   );
 }

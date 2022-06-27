@@ -9,6 +9,7 @@ export default function InputTextArea(props) {
       <label htmlFor="description">
         Descrição
         <textarea
+          className="form-control"
           name="cardDescription"
           id="description"
           cols="30"
