@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function InputCheckbox(props) {
   const { cardTrunfo, onInputChange, hasTrunfo } = props;
@@ -12,7 +13,7 @@ export default function InputCheckbox(props) {
         onChange={ onInputChange }
         data-testid="trunfo-input"
       />
-      Super Trybe Trunfo
+      Super Trunfo
     </label>);
   return (
     <p>
@@ -22,3 +23,9 @@ export default function InputCheckbox(props) {
     </p>
   );
 }
+
+InputCheckbox.propTypes = {
+  cardTrunfo: PropTypes.bool.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+  hasTrunfo: PropTypes.bool.isRequired,
+};
