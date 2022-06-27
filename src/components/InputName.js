@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function InputName(props) {
   const { cardName, onInputChange } = props;
@@ -19,3 +20,8 @@ export default function InputName(props) {
     </p>
   );
 }
+
+InputName.propTypes = {
+  cardName: PropTypes.string.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+};
