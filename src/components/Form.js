@@ -22,7 +22,36 @@ class Form extends React.Component {
       isAttr1Valid,
       isAttr2Valid,
       isAttr3Valid,
+      onInputChange,
+      isSumAttrsValid,
     } = this.props;
+
+    const inputAttrs = [
+      {
+        id: 'attr01',
+        name: 'cardAttr1',
+        value: cardAttr1,
+        testId: 'attr1-input',
+        isValidInput: isAttr1Valid,
+        textLabel: 'Attrib 1',
+      },
+      {
+        id: 'attr02',
+        name: 'cardAttr2',
+        value: cardAttr2,
+        testId: 'attr2-input',
+        isValidInput: isAttr2Valid,
+        textLabel: 'Attrib 2',
+      },
+      {
+        id: 'attr03',
+        name: 'cardAttr3',
+        value: cardAttr3,
+        testId: 'attr3-input',
+        isValidInput: isAttr3Valid,
+        textLabel: 'Attrib 3',
+      },
+    ];
 
     return (
       <form className="form" onSubmit={ this.handleSubmit }>
@@ -35,36 +64,18 @@ class Form extends React.Component {
 
         <section className="form__card-level">
           <ul>
-            <InputNumberAttr
-              { ...this.props }
-              id="attr01"
-              name="cardAttr1"
-              value={ cardAttr1 }
-              testId="attr1-input"
-              isValidInput={ isAttr1Valid }
-            >
-              Attr01
-            </InputNumberAttr>
-            <InputNumberAttr
-              { ...this.props }
-              id="attr02"
-              name="cardAttr2"
-              value={ cardAttr2 }
-              testId="attr2-input"
-              isValidInput={ isAttr2Valid }
-            >
-              Attr02
-            </InputNumberAttr>
-            <InputNumberAttr
-              { ...this.props }
-              id="attr03"
-              name="cardAttr3"
-              value={ cardAttr3 }
-              testId="attr3-input"
-              isValidInput={ isAttr3Valid }
-            >
-              Attr03
-            </InputNumberAttr>
+            {
+              inputAttrs.map((item) => (
+                <InputNumberAttr
+                  key={ item.id }
+                  { ...item }
+                  onInputChange={ onInputChange }
+                  isSumAttrsValid={ isSumAttrsValid }
+                >
+                  { item.textLabel }
+                </InputNumberAttr>
+              ))
+            }
           </ul>
           <PointSumInfo { ...this.props } />
         </section>
@@ -98,4 +109,6 @@ Form.propTypes = {
   isAttr1Valid: PropTypes.bool.isRequired,
   isAttr2Valid: PropTypes.bool.isRequired,
   isAttr3Valid: PropTypes.bool.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+  isSumAttrsValid: PropTypes.bool.isRequired,
 };
