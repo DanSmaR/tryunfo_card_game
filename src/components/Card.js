@@ -24,7 +24,8 @@ function Card(props) {
       </h3>
       <img
         className="card__image card-image"
-        src={ `../images/${!cardImage ? 'image' : cardImage}.png` }
+        /* src={ `../images/${!cardImage ? 'image' : cardImage}.png` } */
+        src={ `https://picsum.photos/id/${!cardImage ? '1000' : cardImage}/200/300` }
         alt={ !cardName ? 'No loaded image' : cardName }
         data-testid="image-card"
         width="100%"

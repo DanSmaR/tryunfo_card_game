@@ -19,7 +19,7 @@ export default function InputImageURL(props) {
             value={ cardImage }
             data-testid="image-input"
             onChange={ onInputChange }
-            placeholder={ !cardImage ? 'nome-da-carta' : '' }
+            placeholder={ !cardImage ? 'digite 1 a 1084' : '' }
           />
         </span>
       </label>
