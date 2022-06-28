@@ -129,11 +129,13 @@ ul {
 }
 
 .card__rare-info {
-  top: 120px;
+  top: 50%;
+  transform: translateY(50%);
 }
 
 .card__trunfo {
-  top: 90px;
+  top: 45%;
+  transform: translateY(40%);
 }
 
 /* Card Library */
