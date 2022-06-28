@@ -104,6 +104,10 @@ ul {
   padding: 5%;
 }
 
+.card__title {
+  font-size: 1.2em;
+}
+
 .list-group-item {
   display: flex;
   align-items: center;
