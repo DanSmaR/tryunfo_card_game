@@ -25,6 +25,7 @@ ul {
   margin-right: auto;
   width: 80%;
   max-width: 1100px;
+  padding-top: 2em;
 }
 
 .flex-layout {
@@ -32,7 +33,7 @@ ul {
   display: flex;
   gap: 1%;
   justify-content: space-around;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .card-input {
@@ -151,7 +152,11 @@ ul {
   flex-direction: column;
   margin-bottom: 30px;
   min-height: 90vh;
-  padding-bottom: 5%;
+  padding-bottom: 1%;
+}
+
+.cards-box__title {
+  margin-bottom: 2em;
 }
 
 .cards-wrapper {

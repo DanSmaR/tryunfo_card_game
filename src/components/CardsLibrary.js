@@ -6,8 +6,8 @@ export default function CardsLibrary(props) {
   const { cards, nameFilter, rareFilter, trunfoFilter, onDeleteCards } = props;
 
   return (
-    <article>
-      <h2>Todas as Cartas</h2>
+    <article className="cards-box">
+      <h2 className="cards-box__title">Todas as Cartas</h2>
       <div className="cards-wrapper">
         {
           cards
