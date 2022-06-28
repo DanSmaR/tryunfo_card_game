@@ -6,7 +6,7 @@ export default function CardsLibrary(props) {
   const { cards, nameFilter, rareFilter, trunfoFilter, onDeleteCards } = props;
 
   return (
-    <>
+    <article>
       <h2>Todas as Cartas</h2>
       <div className="cards-wrapper">
         {
@@ -26,9 +26,10 @@ export default function CardsLibrary(props) {
               return card.cardRare === rareFilter;
             })
             .map((card) => (
-              <div className="card_wrapper" key={ card.cardName }>
+              <div className="card-wrapper" key={ card.cardName }>
                 <Card { ...card } key={ card.cardName } />
                 <button
+                  className="btn btn-danger"
                   type="button"
                   data-testid="delete-button"
                   onClick={ onDeleteCards.bind(this, card.cardName, card.cardTrunfo) }
@@ -39,7 +40,7 @@ export default function CardsLibrary(props) {
             ))
         }
       </div>
-    </>
+    </article>
   );
 }
 
