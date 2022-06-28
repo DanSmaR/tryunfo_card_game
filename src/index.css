@@ -129,12 +129,12 @@ ul {
 }
 
 .card__rare-info {
-  top: 50%;
+  top: 40%;
   transform: translateY(50%);
 }
 
 .card__trunfo {
-  top: 45%;
+  top: 35%;
   transform: translateY(40%);
 }
 
