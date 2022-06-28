@@ -26,9 +26,9 @@ class App extends React.Component {
       maxAttrValue: 90,
       isInputsNotEmpty: false,
       isSumAttrsValid: true,
-      isAttr1Valid: false,
-      isAttr2Valid: false,
-      isAttr3Valid: false,
+      isAttr1Valid: true,
+      isAttr2Valid: true,
+      isAttr3Valid: true,
     };
   }
 
@@ -163,7 +163,7 @@ class App extends React.Component {
     return (
       <article className="wrapper">
         <h1>Tryunfo</h1>
-        <div className="grid-layout">
+        <div className="flex-layout">
           <section className="card-input">
             <Form
               { ...this.state }
