@@ -140,6 +140,12 @@ ul {
 
 /* Card Library */
 
+/* Search Bar */
+
+.search-cards {
+  align-self: center;
+}
+
 .card-library {
   display: flex;
   flex-direction: column;

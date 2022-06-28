@@ -8,6 +8,7 @@ function SearchBar(props) {
       <h3>Filtros de Busca</h3>
       <p>
         <input
+          className="form-control"
           type="text"
           data-testid="name-filter"
           placeholder="Nome"
@@ -19,9 +20,10 @@ function SearchBar(props) {
       </p>
       <p>
         <select
+          className="form-select"
           data-testid="rare-filter"
           type="text"
-          placeholder="Nome"
+          placeholder="Raridade"
           value={ rareFilter }
           onChange={ onInputFilterChange }
           name="rareFilter"
@@ -34,8 +36,9 @@ function SearchBar(props) {
         </select>
       </p>
       <p>
-        <label htmlFor="trunfo-filter">
+        <label htmlFor="trunfo-filter" className="form-check">
           <input
+            className="form-check-input"
             type="checkbox"
             name="trunfoFilter"
             id="trunfo-filter"
