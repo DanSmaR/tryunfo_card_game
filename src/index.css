@@ -13,34 +13,41 @@ code {
     monospace;
 }
 
-/* Forms */
-
-.form {
-  width: 100%;
-  padding: 1em;
-}
-
-/* label {
-  width: 100%;
-} */
-
-p {
-  width: 100%;
-}
-
 ul {
   list-style: none;
   padding-left: 0;
 }
 
+/* Page layout */
+
 .wrapper {
-  width: 80%;
   margin-left: auto;
   margin-right: auto;
+  width: 80%;
+  max-width: 1100px;
+}
+
+.flex-layout {
+  align-items: center;
+  display: flex;
+  gap: 1%;
+  justify-content: space-around;
+  min-height: 100vh;
 }
 
 .card-input {
-  width: 30%;
+  width: 35%;
+}
+
+.card-preview {
+  width: 35%;
+}
+
+/* Forms */
+
+.form {
+  padding: 1em;
+  width: 100%;
 }
 
 .row-input {
@@ -89,4 +96,38 @@ ul {
 .form__card-level .input-group-text,
 .form__card-image .input-group-text {
   width: 20%;
+}
+
+/* Card */
+
+.card {
+  padding: 5%;
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+}
+
+.progress {
+  flex-grow: 1;
+}
+
+.card__attributes .input-group-text {
+  justify-content: center;
+  margin-left: auto;
+  width: 15%;
+}
+
+.badge {
+  font-size: 1em;
+}
+
+.card__rare-info {
+  top: 120px;
+}
+
+.card__trunfo {
+  top: 90px;
 }
