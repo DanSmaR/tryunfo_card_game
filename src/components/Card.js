@@ -48,7 +48,7 @@ function Card(props) {
               aria-label="progress-bar"
             />
           </div>
-          <span className="input-group-text">{ cardAttr1 }</span>
+          <span className="input-group-text">{ parseInt(cardAttr1, 10) }</span>
         </li>
         <li data-testid="attr2-card" className="list-group-item">
           Attributo 2
@@ -63,7 +63,7 @@ function Card(props) {
               aria-label="progress-bar"
             />
           </div>
-          <span className="input-group-text">{ cardAttr2 }</span>
+          <span className="input-group-text">{ parseInt(cardAttr2, 10) }</span>
         </li>
         <li data-testid="attr3-card" className="list-group-item">
           Attributo 3
@@ -78,7 +78,7 @@ function Card(props) {
               aria-label="progress-bar"
             />
           </div>
-          <span className="input-group-text">{ cardAttr3 }</span>
+          <span className="input-group-text">{ parseInt(cardAttr3, 10) }</span>
         </li>
       </ul>
       <p
